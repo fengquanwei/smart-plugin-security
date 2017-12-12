@@ -1,5 +1,7 @@
 package com.fengquanwei.plugin.security.aspect;
 
+import com.fengquanwei.framework.annotation.Aspect;
+import com.fengquanwei.framework.annotation.Controller;
 import com.fengquanwei.framework.proxy.AspectProxy;
 import com.fengquanwei.plugin.security.annotation.*;
 import com.fengquanwei.plugin.security.exception.AuthzException;
@@ -16,6 +18,7 @@ import java.lang.reflect.Method;
  * @author fengquanwei
  * @create 2017/12/12 14:52
  **/
+@Aspect(Controller.class)
 public class AuthzAnnotationAspect extends AspectProxy {
     /**
      * 定义一个基于授权功能的注解类数组

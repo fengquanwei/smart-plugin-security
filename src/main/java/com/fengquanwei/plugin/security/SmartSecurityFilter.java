@@ -36,7 +36,7 @@ public class SmartSecurityFilter extends ShiroFilter {
         if (securityRealms != null) {
             String[] securityRealmArray = securityRealms.split(",");
             if (securityRealmArray.length > 0) {
-                Set<Realm> realms = new LinkedHashSet<Realm>(); // 使 Realm 具备唯一性与顺序性
+                Set<Realm> realms = new LinkedHashSet<>(); // 使 Realm 具备唯一性与顺序性
                 for (String securityRealm : securityRealmArray) {
                     if (securityRealm.equalsIgnoreCase(SecurityConstant.REALMS_JDBC)) {
                         addJdbcRealm(realms); // 添加基于 JDBC 的 Realm，需配置相关 SQL 查询语句
